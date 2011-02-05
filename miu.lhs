@@ -13,22 +13,29 @@ is often called a "Post production system". This Chapter introduces you to a for
 system and moreover, it is my hope that you will want to explore this formal system at
 least a little; so to provoke your curiosity, I have posed a little puzzle.
 
-> data Alphabet = M | I | U
+> data Alphabet = M | I | U deriving (Eq, Show)
 
 > data Regex = Group    [Regex]
->            | List     [Alphabet] -- List is just a convenience function to avoid bulk 'Atom's
+>            | List     [Alphabet] -- List is just a convenience function to avoid repeated 'Atom's
 >            | Last      Regex
 >            | Capture   Regex
 >            | Plus      Regex
 >            | Atom      Alphabet
 >            | Reference Int
 >            | Anything
+>
+>         deriving Show
 
-> data Action = Append Regex Regex | Replace Regex Regex | Remove Regex
+> data Action = Append Regex Regex | Replace Regex Regex | Remove Regex deriving Show
 
 "Can you produce MU?" is the puzzle. To begin with, you will be supplied with a
 string (which means a string of letters).* Not to keep you in suspense, that string will be
-MI. Then you will be told some rules, with which you can change one string into another.
+MI.
+
+> start = [M,I]
+> end   = [M,U]
+
+Then you will be told some rules, with which you can change one string into another.
 If one of those rules is applicable at some point, and you want to use it, you may, but
 there is nothing that will dictate which rule you should use, in case there are several
 applicable rules. That is left up to you-and of course, that is where playing the game of
