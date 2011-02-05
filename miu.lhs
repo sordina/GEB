@@ -7,9 +7,9 @@ The MU-puzzle
 Formal Systems
 --------------
 
-ONE OF THE most central notions in this book is that of a  formal system. The type of
+ONE OF THE most central notions in this book is that of a formal system. The type of
 formal system I use was invented by the American logician Emil Post in the 1920's, and
-is often called a "Post production system".  This Chapter introduces you to a formal
+is often called a "Post production system". This Chapter introduces you to a formal
 system and moreover, it is my hope that you will want to explore this formal system at
 least a little; so to provoke your curiosity, I have posed a little puzzle.
 
@@ -91,7 +91,7 @@ the MIU-system never contain "x" “s”!
 
 Here is the third rule:
 
-RULE III: If  III occurs in one of the strings in your collection, you may make a new
+RULE III: If III occurs in one of the strings in your collection, you may make a new
 string with U in place of III.
 
 > rule3 = Replace (List [I,I,I]) (Atom U)
@@ -102,10 +102,10 @@ From MII11, you could make MIU (also MUI).
 From IIMII, you can't get anywhere using this rule. (The three I's have to be consecutive.)
 From MIII, make MU.
 
-Don't, under any circumstances, think you can  run this rule backwards, as in the
+Don't, under any circumstances, think you can run this rule backwards, as in the
 following example:
 
-From MU, make MIII            <- This is wrong.
+From MU, make MIII <- This is wrong.
 
 Rules are one-way.
 
